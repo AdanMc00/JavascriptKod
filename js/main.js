@@ -1,30 +1,63 @@
-var word = "perros"
-var wordMin = word[0] + word[1] +word[2] + word[3] +word [4]
 
-console.log(wordMin)
+var numbers = [1,2,3,4,5]
+var position = 0
 
-var number = 15
+while (position<numbers.length) {
+console.log(numbers[position])
+position++
+}
 
-if ((number >= 10 && number < 100) && number % 10 === 10){
+var positionR = numbers.length
+
+while (positionR >= 0 ) {
+    console.log(numbers[positionR])
+        positionR--
+    }
+
+    /** ejercicio2 */
+
+    var numbers = [1,2,3,4,5,[6,7,8,9,10]]
+
+    var positionL = 0
     
-    console.log("el numero esta en el rango")
+    while(positionL< numbers.length) {
+        console.log(numbers[positionL][positionL])
+        positionL++
+    }
+
+/*ejercicio3*/
+    var word = "palabra"
+    var countwo = 0
+
+for (var count= 0; count<word.length; count ++ ) {
+    if (word.charAt(count) === "a") {
+        countwo++
+        console.log(`${word} tiene ${countwo} vocales`)
+    }
+
+
 }
 
 
-var word = "Vaca"
 
-if (word.length % 2 === 0) {console.log("EL numero es par")
+/* ejercicio 4 */
 
-if (word.length >= 0){
-(console.log("el numero es mayo que cero") }
-
- if  (word.length <=10) {
-    (console.log ("el numero es mayo que cero") }
-
-if (word.length >10) {
-    (console.log("el numero es mayo que cero")
+    
+var numberOne =  10
+var numberTwo= 50
+var numbersCount = 0
+if(numberOne > 0 && numberTwo > 0 && numberOne < numberTwo){
+    console.log("Ambos son positivos")
+    
+    for (var count = 0; count<numberTwo; count++){
+        numberOne++
+        console.log(numberOne)
+            if(numberOne % 8 === 0 ){
+            numbersCount++
+            console.log(`Hay ${numbersCount} multiplos de 8`)
+        }
+            
+        }
 }
 
-else (<= 15) {
-    (console.log("el numero es mayo que cero")
-}
+
