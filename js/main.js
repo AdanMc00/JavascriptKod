@@ -1,47 +1,13 @@
-/*
-function capitalize (string){
-    
-    string.toLowerCase()
-    var separateWords = string.split(' ')
-    var arrayCapitalize = []
-    for (count = 0; count< separateWords.length; count++) {
-        var wordToWord = separateWords[count]
-        var wordCapitalize =`${wordToWord[0].toUpperCase()} ${wordCapitalize.slice(1)}`
-        arrayCapitalize[count]= wordCapitalize
-    }
+var numbers = [[1,3,4,5] , [3,45,1], [2,4,5],[2,6,8]]
+numbers.map(function(arr){
+    let total = 0
+    arr.forEach(function(number){
+        total += number
+        console.log(total)
+    })
+return total
 
-    var arrayToString = arrayCapitalize.join (' ')
-    return arrayToString
-}
-*/
-
-/*Ejercicio2*/
-
-function longestWord(phrase){
+})
 
 
-    var word = phrase.split (" ")
-    var wordSplit = word[0]
-        for (count = 0 ; count<word.length - 1; count++){
-        var comparedWord = word[count+1]
-        if (comparedWord.length>wordSplit.length)
-        {wordSplit = comparedWord}
-   
-   return wordSplit
-   }
-}
-
-/* Ejercicio 3 */
-
-function numberone (matrix){
-var arrayJoin = matrix.join()
-var countNum = 0
-
-for(count = 0;count <arrayJoin.length; count++ ){
-    if (arrayJoin[count] === 1){
-        countNum++
-    }
-    return countNum
-}
-}
 
