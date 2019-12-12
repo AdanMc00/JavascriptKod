@@ -9,19 +9,19 @@ var alumno = [
     nombre: "luis",
     apellido: "sanchez",
     edad: 25,
-    calificacion:7,
+    calificacion: 7,
   }
 ]
 
 
 
-  alumno.reduce((acc, valor) => acc + valor.calificacion / alumno.length),0
-  console.log(alumno)
+const prom = alumno.reduce((acc, valor) => acc + valor.calificacion, 0) / alumno.length
+console.log(prom)
 
 
 
 
-/*Ejercicio3*/
+/*Ejercicio3 */
 
 var alumno = [
 
@@ -49,7 +49,7 @@ var alumno = [
 
 ]
 
-​
+
 
 for (propiedad in alumno) {
 
@@ -57,11 +57,11 @@ for (propiedad in alumno) {
 
   const promMat = sumaCalif.reduce((acc, valor) => acc + valor / sumaCalif.length, 0)
 
-​
+
 
   console.log(promMat)
 
-​
+
 
 }
 
