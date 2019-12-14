@@ -1,5 +1,5 @@
 /*ejercicio1*/
-/*
+
 var person = [
 ['Jorge', 'Perez',23],
 ['Juan','Torres',25],
@@ -15,7 +15,7 @@ function Person(first,last,age){
     this.age=age
 }
 
-*/
+
 
 /*reto1*/
 
