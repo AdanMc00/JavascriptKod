@@ -1,4 +1,4 @@
-/*ejercicio1*/ 
+/*ejercicio1*/
 /*
 var person = [
 ['Jorge', 'Perez',23],
@@ -19,15 +19,39 @@ function Person(first,last,age){
 
 /*reto1*/
 
-var arrayOfMultiples = [2,3,4,5]
-for(count = 0; count<arrayOfMultiples.length; count++){
-    console.log(arrayOfMultiples[count]*arrayOfMultiples[0])
+let arraysM = []
+const arrayOfMultiples = (number, length) => {
+    for (count = 0; count < length; count++) {
+        arraysM.push([number * count])
+
+    }
+    return arraysM
 }
 
 /*reto2*/
 
-var object = ({
+var objeto = ({
     keyOne: 12,
     keyTwo: 45
-    })
-    console.log(Array.from(object).map)
+})
+
+const objetoMatriz = objeto => {
+
+
+    var valores = []
+    var arrayVacio = []
+    for (var prop in objeto) {
+
+        valores.push(prop)
+    }
+    for (var count = 0; count < valores.length; count++) {
+        arrayVacio.push([valores[count], objeto[valores[count]]])
+
+
+    }
+    return objeto
+}
+
+
+
+
