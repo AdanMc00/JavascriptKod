@@ -1,51 +1,131 @@
-/*var objectOne = [{
-  'nodename': 'p',
-  'content': 'hola'
-}, {
-  'nodename': 'p',
-  'content': 'mundo'
-}, {
-  'nodename': 'h1',
-  'content': 'perros'
+
+var kodersArray = [];
+
+/* document.getElementById("koder-name")
+
+    .addEventListener('keyup', (event) => {
+
+        let inputValue = event.target.value;
+
+        console.log(inputValue)
+
+    })
+
+document.getElementById("koder-email")
+
+    .addEventListener('keyup', (event) => {
+
+        let inputValue = event.target.value;
+
+        console.log(inputValue)
+
+    }) */
+/*
+document.querySelectorAll(".form-control").forEach((element) => {
+
+    element.addEventListener('keyup', (event) => {
+
+        let inputValue = event.target.value;
+
+        console.log(inputValue)
+
+    })
+
+})
+
+const validateEmptyInput = () => {
+
+    let koderMail = document.getElementById("koder-email").value;
+
+    if (koderMail === "") {
+
+        document.getElementById("koder-email").classList.add("alert-danger", "border-danger");
+
+    } else {
+
+        document.getElementById("koder-email").classList.remove("alert-danger", "border-danger");
+
+    }
+
 }
-]
-const buildStruct = (nodes, parent) => {
 
-  const conatiner = document.getElementById(parent)
-  nodes.forEach(
-    ({ nodename, content }) => {
-    const nodesTwo = document.createElement(nodename)
-    nodesTwo.innerText = content
-    container.appendChild(nodesTwo)
-    
+const clearError = () => {
 
-  })
-};
+    document.getElementById("koder-email").classList.remove("alert-danger", "border-danger");
+
+    document.getElementById("koder-email").classList.add("alert-success", "border-success");
+
+}
 */
+/*crear un boton que diga "agregar koder"*/
 
-/*Ejercicio2*/
+/*al darle clic debe tomar los datos de cada uno de los campos del formulario y crear un objeto llamado koderObject (koderName, koderEmail, koderAddress)*/
 
-const arrayCards = [
-  {
-    'title': 'Koders aprenden',
-    'subtitle': 'a golpes',
-    'content': 'ndkjndkjn',
-    'img': 'tu imagen aqui'
-  }
-]
-const buildCards = (titulo, subtitulo, descripcion) => {
+/*debe agregar el koderObject a kodersArray*/
 
+/*debe crear una card por cada koder registrado*/
 
-  return (
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">$(title)></h5>
-        <h6 class="card-subtitle mb-2 text-muted">$(subtitle)</h6>
-        <p class="card-text">$(description)</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+const buildCard = (koderName, koderAddress, koderEmail) => {
+
+    return (
+
+        `
+
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+
+          <h5 class="card-title">${koderName}</h5>
+
+          <p class="card-text mb-2 text-muted">${koderAddress}</p>
+
+          <p class="card-text">${koderEmail}</p>
+
+        </div>
+
       </div>
-    </div>
+
+      
+
+      `
+
+    )
+
 }
+
+const buildCards = (cards, parent) => {
+
+    var accCards = cards.reduce((acc, { koderName, koderEmail, koderAddress }) => {
+
+        console.log(acc)
+
+        return acc + buildCard(koderName, koderEmail, koderAddress)
+
+    }, '')
+
+    document.getElementById(parent).innerHTML = accCards
+
+}
+
+
+
+const addKoder = () => {
+
+    let koderName = document.getElementById("koder-name").value;
+
+    let koderEmail = document.getElementById("koder-email").value;
+
+    let koderAddress = document.getElementById("koder-address").value;
+
+    let koderObject = { koderName, koderEmail, koderAddress }
+
+    kodersArray.push(koderObject)
+
+    buildCards(kodersArray, "koders-wrapper")
+
+}
+
+document.getElementById("add-koder").addEventListener("click", addKoder)
+
 
 
